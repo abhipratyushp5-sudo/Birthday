@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16080b">
+  <meta name="description" content="A romantic little garden made with love.">
+  <title>For You, With Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-rose">✦</div>
+      <p>Growing something beautiful...</p>
+    </div>
+  </div>
+
+  <canvas id="particles"></canvas>
+  <div class="grain"></div>
+  <div class="petal-layer" id="petalLayer"></div>
+  <div class="tulip-field" id="tulipField"></div>
+  <div class="rose-corner rose-corner-left" aria-hidden="true"></div>
+  <div class="rose-corner rose-corner-right" aria-hidden="true"></div>
+
+  <button id="musicBtn" class="floating-btn" aria-label="Toggle music">♫</button>
+  <button id="soundBtn" class="floating-btn sound-btn" aria-label="Toggle effects">♡</button>
+
+  <main>
+    <section id="hero" class="screen hero-screen active">
+      <div class="moon"></div>
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+      <div class="hero-vignette"></div>
+
+      <div class="hero-content parallax">
+        <p class="eyebrow">My Jaan • My Princess • My Betu</p>
+        <div class="hero-bloom">
+          <span class="stem"></span>
+          <span class="leaf leaf-a"></span>
+          <span class="leaf leaf-b"></span>
+          <span class="tulip-bloom">
+            <i></i><i></i><i></i><i></i>
+          </span>
+        </div>
+        <p class="script">For my love, who made my life better with her endless love, care, and support</p>
+        <h1>Something<br><em>beautiful</em><br>for you.</h1>
+        <p class="subtext">Take your time. Let the flowers fall. There is a little piece of my heart waiting inside.</p>
+        <button class="primary-btn" data-next="garden">
+          <span>Enter the garden</span><span>♡</span>
+        </button>
+        <div class="scroll-hint">Meri Babu Happy Bday</div>
+      </div>
+    </section>
+
+    <section id="garden" class="screen garden-screen">
+      <div class="garden-haze"></div>
+      <div class="section-content reveal">
+        <span class="section-number">01 / 05</span>
+        <p class="script">A garden grows where love is remembered</p>
+        <h2>Choose a <em>flower.</em></h2>
+        <p class="body-copy">Touch one. Every bloom carries a different little thought for you.</p>
+
+        <div class="flower-garden" id="flowerGarden">
+          <button class="flower-card rose-card" data-flower="rose"
+            data-message="You are the warmth in my heart, the reason behind my smiles, and the beautiful meaning hidden in every part of my life.">
+            <span class="real-flower rose-svg rose-red" aria-hidden="true">
+              <svg viewBox="0 0 180 220" role="img" aria-label="Red rose">
+                <defs>
+                  <radialGradient id="redRosePetal" cx="38%" cy="25%" r="78%">
+                    <stop offset="0" stop-color="#ffd7dc" />
+                    <stop offset=".35" stop-color="#ef7188" />
+                    <stop offset=".72" stop-color="#bd294d" />
+                    <stop offset="1" stop-color="#76142f" />
+                  </radialGradient>
+                  <linearGradient id="roseStem" x1="0" x2="1">
+                    <stop stop-color="#35563a" />
+                    <stop offset=".5" stop-color="#79a06b" />
+                    <stop offset="1" stop-color="#28482f" />
+                  </linearGradient>
+                </defs>
+                <path d="M91 112 C91 142 91 173 89 205" stroke="url(#roseStem)" stroke-width="6" stroke-linecap="round"
+                  fill="none" />
+                <path d="M88 160 C63 144 45 148 30 164 C55 174 73 174 88 165Z" fill="#557d50" />
+                <path d="M92 176 C111 154 133 153 151 160 C137 179 114 184 92 181Z" fill="#638c59" />
+                <g fill="url(#redRosePetal)" stroke="#a82345" stroke-opacity=".28" stroke-width="1.5">
+                  <path d="M91 116 C48 121 24 101 29 72 C34 43 63 31 86 50 C55 44 48 66 59 80 C67 90 80 95 91 97Z" />
+                  <path d="M91 115 C54 101 44 70 62 49 C80 27 111 33 120 60 C98 45 83 54 80 69 C77 84 84 95 96 103Z" />
+                  <path
+                    d="M92 114 C89 78 108 48 135 51 C164 54 174 84 154 104 C151 78 133 69 119 79 C107 88 106 101 111 112Z" />
+                  <path
+                    d="M91 112 C119 89 150 95 159 119 C168 144 143 159 119 148 C138 138 137 121 124 115 C112 110 102 115 95 124Z" />
+                  <path
+                    d="M91 113 C71 145 41 148 28 126 C14 103 33 83 60 88 C41 100 49 117 64 121 C76 124 85 119 91 108Z" />
+                  <path
+                    d="M91 113 C79 96 81 77 97 68 C116 57 137 70 136 91 C121 76 105 82 102 95 C99 106 105 114 113 120Z" />
+                  <path
+                    d="M91 111 C101 101 116 102 122 113 C128 125 119 137 106 135 C114 126 109 117 101 117 C96 117 92 120 88 124Z"
+                    fill="#a81f43" />
+                </g>
+              </svg>
+            </span>
+            <span>Rose</span>
+          </button>
+
+          <button class="flower-card tulip-card" data-flower="tulip"
+            data-message="You came into my life like a gentle bloom, making everything more beautiful, more meaningful, and more worth living for.">
+            <span class="real-flower tulip-art" aria-hidden="true">
+              <i></i><i></i><i></i><i></i>
+            </span>
+            <span>Tulip</span>
+          </button>
+
+          <button class="flower-card rose-card blush" data-flower="rose"
+            data-message="You are not just a part of my life; you are the beauty that completes it, the love that makes everything feel right.">
+            <span class="real-flower rose-svg rose-blush" aria-hidden="true">
+              <svg viewBox="0 0 180 220" role="img" aria-label="Blush rose">
+                <defs>
+                  <radialGradient id="blushRosePetal" cx="36%" cy="23%" r="80%">
+                    <stop offset="0" stop-color="#fff2ed" />
+                    <stop offset=".38" stop-color="#f5a8b3" />
+                    <stop offset=".75" stop-color="#d65c76" />
+                    <stop offset="1" stop-color="#a53650" />
+                  </radialGradient>
+                </defs>
+                <path d="M91 113 C91 143 91 174 89 205" stroke="#557651" stroke-width="6" stroke-linecap="round"
+                  fill="none" />
+                <path d="M88 160 C62 145 44 151 31 166 C55 176 74 174 89 165Z" fill="#648b5c" />
+                <path d="M92 178 C112 157 133 155 151 162 C136 181 114 185 92 182Z" fill="#729666" />
+                <g fill="url(#blushRosePetal)" stroke="#c45670" stroke-opacity=".25" stroke-width="1.5">
+                  <path d="M91 116 C50 122 25 102 30 73 C35 45 64 33 87 51 C57 46 48 67 60 81 C68 91 80 95 92 98Z" />
+                  <path d="M91 114 C54 101 44 70 63 49 C81 29 111 34 121 60 C99 46 83 55 81 70 C78 84 85 96 97 103Z" />
+                  <path
+                    d="M93 114 C90 79 108 50 135 52 C163 55 173 85 154 104 C151 79 133 70 119 80 C107 89 107 101 112 112Z" />
+                  <path
+                    d="M92 113 C120 90 150 96 159 120 C168 143 143 158 119 148 C138 138 137 122 124 115 C112 110 102 115 95 124Z" />
+                  <path
+                    d="M91 113 C72 144 42 148 29 126 C15 104 34 84 60 89 C42 101 49 117 64 121 C77 125 85 119 91 108Z" />
+                  <path
+                    d="M91 112 C79 97 81 77 98 68 C117 58 137 71 136 92 C121 77 105 83 102 96 C99 106 105 114 113 120Z" />
+                  <path
+                    d="M91 112 C101 101 116 103 122 114 C128 126 119 137 106 135 C114 126 109 118 101 118 C96 118 92 121 88 125Z"
+                    fill="#c84968" />
+                </g>
+              </svg>
+            </span>
+            <span>Blush Rose</span>
+          </button>
+        </div>
+
+        <div id="flowerMessage" class="flower-message" aria-live="polite"></div>
+        <button id="flowerContinue" class="ghost-btn hidden" data-next="letter">Read the letter →</button>
+      </div>
+    </section>
+
+    <section id="letter" class="screen letter-screen">
+      <div class="petal-wash"></div>
+      <div class="section-content letter-content reveal">
+        <span class="section-number">02 / 05</span>
+        <p class="script">A few words I could never say perfectly</p>
+        <h2>For <span class="editable" data-placeholder="her name">[HER NAME]</span></h2>
+
+        <article class="letter-card">
+          <div class="wax">♥</div>
+          <div class="letter-line"></div>
+          <p id="letterText" class="letter-text"></p>
+          <p class="signature">— <span class="editable" data-placeholder="your name">[YOUR NAME]</span></p>
+        </article>
+
+        <button class="ghost-btn" data-next="memories">Keep going →</button>
+      </div>
+    </section>
+
+    <section id="memories" class="screen memories-screen">
+      <div class="stars"></div>
+      <div class="section-content reveal">
+        <span class="section-number">03 / 05</span>
+        <p class="script">The little things are the big things</p>
+        <h2>Our little <em>world.</em></h2>
+        <p class="body-copy"></p>
+
+        <div class="memory-grid">
+          <button class="memory-card tall"
+            data-memory="The moment I realised an ordinary day felt different because you were in it.">
+            <span class="memory-photo photo-one"><b>01</b></span>
+            <span>That one moment</span>
+          </button>
+          <button class="memory-card" data-memory="The beginning of a story I didn't know I would treasure this much.">
+            <span class="memory-photo photo-two"><b>02</b></span>
+            <span>Where it started</span>
+          </button>
+          <button class="memory-card"
+            data-memory="Late nights, quiet conversations and the kind of memories that stay warm.">
+            <span class="memory-photo photo-three"><b>03</b></span>
+            <span>Our little nights</span>
+          </button>
+          <button class="memory-card wide"
+            data-memory="If I could keep one feeling forever, it would be this one: being grateful that you exist.">
+            <span class="memory-photo photo-four"><b>04</b></span>
+            <span>My favourite us</span>
+          </button>
+        </div>
+
+        <div id="memoryMessage" class="memory-message"></div>
+        <button class="ghost-btn" data-next="finale">There is one last thing →</button>
+      </div>
+    </section>
+
+    <section id="finale" class="screen finale-screen">
+      <div class="finale-glow"></div>
+      <div class="finale-orbit orbit-one"></div>
+      <div class="finale-orbit orbit-two"></div>
+
+      <div class="section-content reveal">
+        <span class="section-number">04 / 05</span>
+        <div class="cake-art" aria-hidden="true">
+          <span class="candle c1"></span><span class="candle c2"></span><span class="candle c3"></span>
+          <span class="flame f1"></span><span class="flame f2"></span><span class="flame f3"></span>
+          <span class="cake-top"><i></i><i></i><i></i></span>
+          <span class="cake-middle"></span>
+          <span class="cake-bottom"></span>
+          <span class="cake-plate"></span>
+        </div>
+        <p class="script">And if you ever forget...</p>
+        <h2>You are<br><em>my jaan..my kutti..my little princess</em></h2>
+        <p class="final-message">May your days be filled with happiness, may God bless you with lots of success, and may you get the job you’ve always wished for. And most importantly, may you always keep loving me the way you do. ❤️</p>
+        <div class="final-flowers">
+          <span class="mini-tulip"></span><span class="mini-rose"></span><span class="mini-tulip"></span><span
+            class="mini-rose"></span><span class="mini-tulip"></span>
+        </div>
+        <p class="tiny-final">Happy Birthday meri jaan...Meri Princess 👸</p>
+        <button class="primary-btn" id="replayBtn">Begin again ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="flowerModal" aria-hidden="true">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalFlower" class="modal-flower"></div>
+      <p id="modalMessage"></p>
+    </div>
+  </div>
+
+  <audio id="bgMusic" preload="auto" autoplay loop playsinline>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
